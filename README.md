@@ -1,6 +1,6 @@
 # DevOpsFundamentalProject
 
-##Contents
+## Contents
 
-##Introduction
+## Introduction
 
