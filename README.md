@@ -68,3 +68,12 @@ An outline of the CRUD implementation is as follows:
 - Game Records
 - Hero Records
 
+## Architecture
+
+### Risk Assessment
+
+### Trello Board
+
+### Entity Relationship Diagram
+
+### CI Pipeline
