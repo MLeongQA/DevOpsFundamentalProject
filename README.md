@@ -63,17 +63,7 @@ An outline of the CRUD implementation is as follows:
   - Attribute
   - Roles
 
-**READ**
-- User Profiles
-- Game Records
-- Hero Records
-
-**Update**
-- User Profiles
-- Game Records
-- Hero Records
-
-**Delete**
+**Read/Update/Delete**
 - User Profiles
 - Game Records
 - Hero Records
