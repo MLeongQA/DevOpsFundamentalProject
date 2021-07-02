@@ -76,7 +76,7 @@ A screenshot of my risk assessment document can be found below.
 
 ![Risk Assessment](https://i.imgur.com/jBcHTP3.png)
 
-The full Risk Assessment document can be found here [here]: https://docs.google.com/spreadsheets/d/18LOucbo6bNB233hZN950s-zoDuAG8sb8tvt1NYHw6a0/edit?usp=sharing
+The full Risk Assessment document can be found here [here](https://docs.google.com/spreadsheets/d/18LOucbo6bNB233hZN950s-zoDuAG8sb8tvt1NYHw6a0/edit?usp=sharing)
 
 ### Project Tracking
 
