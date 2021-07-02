@@ -74,6 +74,10 @@ An outline of the CRUD implementation is as follows:
 
 ### Project Tracking
 
+My Project will be tracked using Jira. Here is my initial diagram that I plan to update as I progress in my project
+
+![Jira Board](https://i.imgur.com/J6FbtIT.png)
+
 ### Entity Relationship Diagram
 
 My inital ER diagram is shown below, with changes expected to be implemented as my project progresses.
