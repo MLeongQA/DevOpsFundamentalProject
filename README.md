@@ -72,8 +72,14 @@ An outline of the CRUD implementation is as follows:
 
 ### Risk Assessment
 
-### Trello Board
+### Project Tracking
 
 ### Entity Relationship Diagram
+
+My inital ER diagram is shown below, with changes expected to be implemented as my project progresses.
+
+![ER Diagram](https://i.imgur.com/QPFhp07.png)
+
+The current structure is one to many relatioship between "User Profile" and "Game Records" as a user can have many games on record. Then we have a one to many relationship between "Game Records" and "Heroes" as a game usually has 10 different hero IDs. Having this relationship allows users to find their game records, as well as the heroes they have played (with/against).
 
 ### CI Pipeline
