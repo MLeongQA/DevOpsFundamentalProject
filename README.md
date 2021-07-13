@@ -92,4 +92,10 @@ My inital ER diagram is shown below, with changes expected to be implemented as 
 
 The current structure is one to many relatioship between "User Profile" and "Game Records" as a user can have many games on record. Then we have a one to many relationship between "Game Records" and "Heroes" as a game usually has 10 different hero IDs. Having this relationship allows users to find their game records, as well as the heroes they have played (with/against).
 
+I have altered my ER diagram to adjust for the change made in my approach to the project
+
+![ER Diagram2](https://i.imgur.com/TkUyLNV.png)
+
+If I have sufficient time in the project, then I will implement further features on to the ER chart, and possibly another table.
+
 ### CI Pipeline
