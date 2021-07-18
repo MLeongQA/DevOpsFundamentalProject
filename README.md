@@ -76,6 +76,8 @@ A screenshot of my risk assessment document can be found below.
 
 ![Risk Assessment](https://i.imgur.com/jBcHTP3.png)
 
+**Update**: After discussing with my mentor, I have decided to make my project simpler due to the risk of potentially not being able to finish in time. This risk has been added on to the risk assessment. The current plan is to revisit this risk assessment after a initial prototype of my project, to change the product to adapt to the risks.
+
 The full Risk Assessment document can be found [here](https://docs.google.com/spreadsheets/d/18LOucbo6bNB233hZN950s-zoDuAG8sb8tvt1NYHw6a0/edit?usp=sharing).
 
 ### Project Tracking
