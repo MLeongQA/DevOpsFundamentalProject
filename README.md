@@ -101,3 +101,5 @@ I have altered my ER diagram to adjust for the change made in my approach to the
 If I have sufficient time in the project, then I will implement further features on to the ER chart, and possibly another table.
 
 ### CI Pipeline
+
+![CI Pipeline Diagram](https://i.imgur.com/bZK3SNX.png)
