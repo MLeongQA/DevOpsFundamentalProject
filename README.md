@@ -103,3 +103,5 @@ If I have sufficient time in the project, then I will implement further features
 ### CI Pipeline
 
 ![CI Pipeline Diagram](https://i.imgur.com/bZK3SNX.png)
+
+The above diagram shows my continuous integration pipeline to promote rapid development and automation to save time. All code is pushed onto github, which Jenkins can then fetch and can run the implemented integration tests. 
