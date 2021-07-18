@@ -82,7 +82,7 @@ The full Risk Assessment document can be found [here](https://docs.google.com/sp
 
 ### Project Tracking
 
-My Project will be tracked using Jira. Here is my initial diagram that I plan to update as I progress in my project
+My Project will be tracked using Trello. Here is the initial diagram that I plan to update as I progress in my project
 
 ![Jira Board](https://i.imgur.com/J6FbtIT.png)
 
