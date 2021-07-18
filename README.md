@@ -82,9 +82,21 @@ The full Risk Assessment document can be found [here](https://docs.google.com/sp
 
 ### Project Tracking
 
-My Project will be tracked using Trello. Here is the initial diagram that I plan to update as I progress in my project
+My Project will be tracked using Trello. This is due to the fact that Trello is free, a easy to understand and present but also has a lot of depth from the various features it provides.
+
+Here is the initial diagram that I plan to update as I progress in my project
 
 ![Jira Board](https://i.imgur.com/4Lrzm7l.png)
+
+I have divided my trello board into multiple lists to categorise each task and be able to see the task progress.
+
+- **Project Resources**: A list of handy resources for my project that can be quickly accessed.
+- **User Stories**: A collection of stories to document the requirements of my project
+- **To Do**: A list of tasks that are required to be initalised.
+- **In Progress**: A list of tasks that have been started and requires completion
+- **Testing**: A list of code related tasks that require testing.
+- **Review**: A list of tasks that require reviewing before being authorised to be completed
+- **Completed**: A list of tasks that have been completed.
 
 The full trello board can be found [here](https://trello.com/b/USnsQD0E/devops-project-board)
 
