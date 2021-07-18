@@ -84,7 +84,9 @@ The full Risk Assessment document can be found [here](https://docs.google.com/sp
 
 My Project will be tracked using Trello. Here is the initial diagram that I plan to update as I progress in my project
 
-![Jira Board](https://i.imgur.com/J6FbtIT.png)
+![Jira Board](https://i.imgur.com/4Lrzm7l.png)
+
+The full trello board can be found [here](https://trello.com/b/USnsQD0E/devops-project-board)
 
 ### Entity Relationship Diagram
 
