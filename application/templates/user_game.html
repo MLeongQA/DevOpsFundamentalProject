@@ -1,0 +1,16 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+<form method='POST' action=''>
+    {{ form.hidden_tag() }}
+    <a href="{{  url_for('home')  }}">Home</a>
+    <br>
+    <hr>
+    <h2>Enter User ID</h2>
+    {{ form.user_id.label }} {{ form.user_id }}
+    
+{{ form.submit_game }}
+
+</form>
+{% endblock body %}

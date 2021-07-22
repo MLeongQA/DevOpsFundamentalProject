@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <a href="{{  url_for('create')  }}">Create New Profile</a>
+    |
+    <a href="{{  url_for('create_game')  }}">Create Game Record</a>
+    |
+    <a href="{{  url_for('user_games')  }}">Show Game Record</a>
+    <br>
+    <hr>
+    <br>
+    {% for user in users %}
+        {{ user.user_id }} | {{ user.user_name }} | {{ user.user_region }} | {{ user.user_mmr }} |
+        <a href="{{  url_for('update', user_id=user.user_id)  }}">Update</a>
+        /
+        <a href="{{  url_for('delete', user_id=user.user_id)  }}">Delete</a>
+        /
+        <a href="{{  url_for('games', user_id=user.user_id)  }}">Games</a>
+        <br>
+        <hr>
+    {% endfor %}
+
+{% endblock body %}
