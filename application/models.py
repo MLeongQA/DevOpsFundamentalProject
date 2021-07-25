@@ -10,8 +10,8 @@ class DotaGame(db.Model):
 class UserProfile(db.Model):
     user_id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(100))
-    user_region = db.Column(db.String(10))
-    user_mmr = db.Column(db.Integer)
+    user_region = db.Column(db.String(10), default="eu-west")
+    user_mmr = db.Column(db.Integer, default=0)
     user_games = db.relationship("DotaGame", backref="userprofile")
 
 

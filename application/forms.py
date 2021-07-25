@@ -8,6 +8,7 @@ class DotaGameForm(FlaskForm):
     game_duration = IntegerField("Insert Game Duration")
     win_loss = SelectField("Win/Loss", choices=[("win", "Win"), ("loss", "Loss")])
     submit_game = SubmitField("Add Game Record")
+    view_game = SubmitField("View Game Record")
 
 class UserProfileForm(FlaskForm):
     user_name = StringField("Insert Username")
