@@ -48,7 +48,7 @@ def create_game():
         db.session.add(new_game)
         db.session.commit()
 
-        return redirect(url_for("home"))
+        return redirect(url_for("games", user_id=game_form.user_id.data))
     
     else:
         return render_template("create_game.html", form=game_form)
@@ -82,7 +82,7 @@ def delete(user_id):
 
 @app.route("/updategame/<int:game_id>", methods = ["GET", "POST"])
 def updategame(game_id):
-    game = DotaGame.query.get(game_id)
+    game = db.session.query(DotaGame).filter_by(replay_id=game_id).first()
     game_form = DotaGameForm()
 
     if request.method == "POST":
@@ -93,7 +93,7 @@ def updategame(game_id):
         db.session.add(game)
         db.session.commit()
 
-        return redirect(url_for("user_games"))
+        return redirect(url_for("games", user_id = game.user_id))
     
     else:
         return render_template("create_game.html", form=game_form)
@@ -102,25 +102,8 @@ def updategame(game_id):
 @app.route("/delete_game/<int:game_id>")
 def deletegame(game_id):
     game = DotaGame.query.get(game_id)
+    id = game.user_id
     db.session.delete(game)
     db.session.commit()
 
-    return redirect(url_for("user_games"))
-
-# @app.route("/complete/<int:id>")
-# def complete(id):
-#     task = Task_Database.query.get(id)
-#     task.completed = True
-#     db.session.add(task)
-#     db.session.commit()
-
-#     return redirect(url_for("home"))
-
-# @app.route("/incomplete/<int:id>")
-# def incomplete(id):
-#     task = Task_Database.query.get(id)
-#     task.completed = False
-#     db.session.add(task)
-#     db.session.commit()
-
-#     return redirect(url_for("home"))
+    return redirect(url_for("games", user_id = id))

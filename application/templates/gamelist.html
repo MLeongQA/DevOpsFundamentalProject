@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 
 {% block body %}
+    <h2>Games</h2>
+    <hr>
     <a href="{{  url_for('home')  }}">Home</a>
     |
     <a href="{{  url_for('create')  }}">Create New Profile</a>
@@ -10,12 +12,14 @@
     <hr>
     <br>
     {% for game in games %}
+    <div class="games">
         {{ game.replay_id }} | {{ game.hero_name }} | {{ game.game_duration }} | {{ game.win_loss }} |
         <a href="{{  url_for('updategame', game_id=game.replay_id)  }}">Update</a>
         /
         <a href="{{  url_for('deletegame', game_id=game.replay_id)  }}">Delete</a>
         <br>
         <hr>
+    </div>
     {% endfor %}
 
 {% endblock body %}
