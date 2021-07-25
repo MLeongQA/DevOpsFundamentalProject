@@ -116,6 +116,36 @@ If I have sufficient time in the project, then I will implement further features
 
 ### CI Pipeline
 
-![CI Pipeline Diagram](https://i.imgur.com/bZK3SNX.png)
+![CI Pipeline Diagram](https://i.imgur.com/kUqBXb6.png)
 
-The above diagram shows my continuous integration pipeline to promote rapid development and automation to save time. All code is pushed onto github, which Jenkins can then fetch and can run the implemented integration tests. 
+The above diagram shows my continuous integration pipeline to promote rapid development and automation to save time. All code is pushed onto github, which Jenkins can then fetch and can run the implemented integration tests. Trello is used for project tracking to ensure tasks are finished on time, and Selenium is used to run integration tests for my application. 
+
+**Jenkins Build Script**
+
+I have broken the build script down into four stages:
+
+1. Installation of relevant modules for the virtual environment.
+
+```
+
+```
+
+2. Setting up the virtual environment with python-venv.
+
+```
+
+```
+
+3. Initiating the unit and integration tests.
+
+```
+
+```
+
+4. Running the flask-app on the VM.
+
+```
+
+```
+
+
