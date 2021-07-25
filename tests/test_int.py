@@ -57,6 +57,19 @@ class TestLinks(TestBase):
         self.driver.find_element_by_xpath('/html/body/a[3]').click()
         self.assertIn(url_for("user_games"), self.driver.current_url)
 
+    def test_update_profile_link(self):
+        self.driver.find_element_by_xpath('/html/body/div[2]/a[1]').click()
+        self.assertIn(url_for("update", user_id = 1), self.driver.current_url)
+    
+    def test_game_link(self):
+        self.driver.find_element_by_xpath('/html/body/div[2]/a[3]').click()
+        self.assertIn(url_for("games", user_id = 1), self.driver.current_url)
+
+    def test_game_update_link(self):
+        self.driver.find_element_by_xpath('/html/body/div[2]/a[3]').click()
+        self.driver.find_element_by_xpath('/html/body/div[2]/a[1]').click()
+        self.assertIn(url_for("updategame", game_id = 1), self.driver.current_url)
+
 class TestCreateProfile(TestBase):
     def test_create_profile(self):
         self.driver.find_element_by_xpath('/html/body/a[1]').click()
