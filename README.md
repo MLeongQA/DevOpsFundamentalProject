@@ -68,6 +68,8 @@ An outline of the CRUD implementation is as follows:
 - Game Records
 - Hero Records
 
+**Update**: This has been updated after discussion to remove the Heros table and come back to it as a future development point.
+
 ## Architecture
 
 ### Risk Assessment
@@ -148,4 +150,4 @@ I have broken the build script down into four stages:
 
 ```
 
-
+## Development
