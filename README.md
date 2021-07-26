@@ -9,7 +9,7 @@
   - [Risk Assessment](#Risk Assessment)
   - [Project Tracking](#Project Tracking)
   - [ER Diagram](#ER Diagram)
-  - [CI Pipeline](#CI Pipeline)
+  - [CI Pipeline](#CI Pipeline.)
   - [Analysis of Testing](#Analysis of Testing)
 - [Development](#Development)
   - [Unit Testing](#Unit Testing)
