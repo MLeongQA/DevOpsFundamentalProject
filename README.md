@@ -2,6 +2,24 @@
 
 ## Contents
 
+- [Introduction](#Introduction)
+  - [Objective](#Objective)
+  - [My Proposition](#My)
+- [Architecture](#Architecture)
+  - [Risk Assessment](#Risk)
+  - [Project Tracking](#Project)
+  - [ER Diagram](#ER)
+  - [CI Pipeline](#CI)
+  - [Analysis of Testing](#Analysis)
+- [Development](#Development)
+  - [Unit Testing](#Unit)
+  - [Integration Testing](#Integration)
+  - [Front-end Development](#Front-end)
+- [Evaluation](#Evaluation)
+  - [Points of Improvement](#Ideas)
+  - [Authors](#Authors)
+  - [Acknowledgements](#Acknowledgements)
+
 ## Introduction
 
 ### Objective
@@ -68,6 +86,8 @@ An outline of the CRUD implementation is as follows:
 - Game Records
 - Hero Records
 
+**Update**: This has been updated after discussion to remove the Heros table and come back to it as a future development point.
+
 ## Architecture
 
 ### Risk Assessment
@@ -110,12 +130,127 @@ The current structure is one to many relatioship between "User Profile" and "Gam
 
 **Update**: I have altered my ER diagram to adjust for the change made in my approach to the project
 
-![ER Diagram2](https://i.imgur.com/TkUyLNV.png)
+![ER Diagram2](https://i.imgur.com/E1pJayA.png)
 
 If I have sufficient time in the project, then I will implement further features on to the ER chart, and possibly another table.
 
+### Analysis of Testing
+
+I've decided to use a series of Unit tests and integration tests for my application. Trello was used to keep track of functionality that required unit/integration tests, to ensure that I reached 100% coverage for my application. More information on each specific testing can be found below.
+
 ### CI Pipeline
 
-![CI Pipeline Diagram](https://i.imgur.com/bZK3SNX.png)
+![CI Pipeline Diagram](https://i.imgur.com/kUqBXb6.png)
 
-The above diagram shows my continuous integration pipeline to promote rapid development and automation to save time. All code is pushed onto github, which Jenkins can then fetch and can run the implemented integration tests. 
+The above diagram shows my continuous integration pipeline to promote rapid development and automation to save time. All code is pushed onto github, which Jenkins can then fetch and can run the implemented integration tests. Trello is used for project tracking to ensure tasks are finished on time, and Selenium is used to run integration tests for my application. 
+
+**Jenkins Build Script**
+
+I have broken the build script down into three stages:
+
+1. Installation of relevant modules for the virtual environment.
+
+```
+#!/bin/sh
+sudo apt-get install python3 python3-pip python3-venv chromium-browser -y wget unzip -y
+
+version=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$(chromium-browser --version | grep -oP 'Chromium \K\d+'))
+wget https://chromedriver.storage.googleapis.com/${version}/chromedriver_linux64.zip
+sudo unzip chromedriver_linux64.zip -d /usr/bin
+rm chromedriver_linux64.zip
+```
+
+2. Setting up the virtual environment with python-venv.
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+3. Initiating the unit and integration tests.
+
+```
+python3 -m pytest --cov=application --cov-report term-missing --disable-warnings
+```
+
+
+## Development
+
+### Unit Testing
+
+Unit Testing was used to test the back-end of my application, to ensure routes were working + data was being manipulated correctly. Each functionality of my app was divided into seperate classes and functions, and assertions were used to ensure that the correct response was produced for each action. Tests are automatically run after every git push using Jenkins webhooks and a coverage report is produced using JaCoCo, which is set up to fail the build, if the coverage degrades more than a specified threshold.
+
+![Coverage](https://i.imgur.com/DT1LrkO.png)
+
+Unit tests and integration tests can be run manually by using the three steps in the Jenkins build script highlighted above. 
+
+![Coverage2](https://i.imgur.com/wxpbymr.png)
+
+### Integration Testing
+
+Integration testing was used to test the front-end of my application, to ensure that the forms were correctly interacting with each other. Selenium was used to simulate a user on my application, and test each functionality of the site by interacting with forms, links and buttons.
+
+![Coverage2](https://i.imgur.com/wxpbymr.png)
+
+Any failures in the integration testing would be highlighted on the coverage report. 
+
+### Front-end Development
+
+**Home Page**
+
+![HomePage](https://i.imgur.com/sjX1YiS.png)
+
+The home page lists all of the registered profiles on the site, as well as linking the user to the creation + game view portion of the site. Along with the user ID, the username, their region as well as their current mmr (match making rank) is shown. These information can be edited using the "update"/"delete" buttons, and games for the specific user can be accessed by clicking the "games" button.
+
+
+
+**Create Page**
+
+![CreatePage](https://i.imgur.com/3yzjfxJ.png)
+
+The create profile page can be accessed from the home page, or using the "/create" url. Here, users can create new profiles to be recorded onto the site, and if fields are left blank, default values are added onto the columns so it can be edited later in the future. 
+
+
+
+**View Games Page**
+
+![ViewPageID](https://i.imgur.com/5m0Zcic.png)
+
+The view games page, accessed from the home page, requires a valid user ID to be entered, for all of their recorded games to be displayed.
+
+![ViewPage](https://i.imgur.com/0eCsHhN.png)
+
+As an example entering the ID 1, displays all of the games for the user "Puppey" and displays the replay ID, as well as other information such as hero played, game duration and whether the game was a win or a loss.
+
+![ViewPage2](https://i.imgur.com/8H34vuF.png)
+
+Entering a different ID, will show games played by the specific ID.
+
+
+
+**Create Game Record**
+
+![GamesRecord](https://i.imgur.com/q6OlBUp.png)
+
+The create games record can be accessed from the home page, and requires the relevant user ID to be entered to match the game to the user. In addition to the user ID, the hero name, game duration and the win/loss reecord can also be recorded as data. 
+
+
+## Evaluation 
+
+### Ideas for Potential Improvements
+
+- Implement a third heroes database that can be related to games.
+- Implement a many to many relationship between players and games instead of a one to many.
+- Implement a auto increment feature for mmr.
+- Implement filters to allow for broader searches for player profiles/games.
+
+### Authors/Contributors
+
+Mikito Leong
+
+### Acknowledgements
+
+- Oliver Nichols
+- Ryan Wright
+- Victoria Sacre
