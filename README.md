@@ -183,9 +183,13 @@ Any failures in the integration testing would be highlighted on the coverage rep
 
 ![HomePage](https://i.imgur.com/sjX1YiS.png)
 
+The home page lists all of the registered profiles on the site, as well as linking the user to the creation + game view portion of the site. Along with the user ID, the username, their region as well as their current mmr (match making rank) is shown. These information can be edited using the "update"/"delete" buttons, and games for the specific user can be accessed by clicking the "games" button.
+
 **Create Page**
 
 ![CreatePage](https://i.imgur.com/3yzjfxJ.png)
+
+The create profile page can be accessed from the home page, or using the "/create" url. Here, users can create new profiles to be recorded onto the site, and if fields are left blank, default values are added onto the columns so it can be edited later in the future. 
 
 **View Games Page**
 
@@ -198,6 +202,8 @@ Any failures in the integration testing would be highlighted on the coverage rep
 **Create Game Record**
 
 ![GamesRecord](https://i.imgur.com/q6OlBUp.png)
+
+The create games record can be accessed from the home page, and requires the relevant user ID to be entered to match the game to the user. In addition to the user ID, the hero name, game duration and the win/loss reecord can also be recorded as data. 
 
 ## Evaluation 
 
