@@ -112,7 +112,7 @@ The current structure is one to many relatioship between "User Profile" and "Gam
 
 **Update**: I have altered my ER diagram to adjust for the change made in my approach to the project
 
-![ER Diagram2](https://i.imgur.com/TkUyLNV.png)
+![ER Diagram2](https://i.imgur.com/E1pJayA.png)
 
 If I have sufficient time in the project, then I will implement further features on to the ER chart, and possibly another table.
 
