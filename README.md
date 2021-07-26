@@ -182,6 +182,7 @@ Any failures in the integration testing would be highlighted on the coverage rep
 **Home Page**
 
 ![HomePage](https://i.imgur.com/sjX1YiS.png)
+
 The home page lists all of the registered profiles on the site, as well as linking the user to the creation + game view portion of the site. Along with the user ID, the username, their region as well as their current mmr (match making rank) is shown. These information can be edited using the "update"/"delete" buttons, and games for the specific user can be accessed by clicking the "games" button.
 
 
@@ -189,6 +190,7 @@ The home page lists all of the registered profiles on the site, as well as linki
 **Create Page**
 
 ![CreatePage](https://i.imgur.com/3yzjfxJ.png)
+
 The create profile page can be accessed from the home page, or using the "/create" url. Here, users can create new profiles to be recorded onto the site, and if fields are left blank, default values are added onto the columns so it can be edited later in the future. 
 
 
@@ -196,12 +198,15 @@ The create profile page can be accessed from the home page, or using the "/creat
 **View Games Page**
 
 ![ViewPageID](https://i.imgur.com/5m0Zcic.png)
+
 The view games page, accessed from the home page, requires a valid user ID to be entered, for all of their recorded games to be displayed.
 
 ![ViewPage](https://i.imgur.com/0eCsHhN.png)
+
 As an example entering the ID 1, displays all of the games for the user "Puppey" and displays the replay ID, as well as other information such as hero played, game duration and whether the game was a win or a loss.
 
 ![ViewPage2](https://i.imgur.com/8H34vuF.png)
+
 Entering a different ID, will show games played by the specific ID.
 
 
