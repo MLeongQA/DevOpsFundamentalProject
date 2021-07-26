@@ -179,6 +179,26 @@ Any failures in the integration testing would be highlighted on the coverage rep
 
 ### Front-end Development
 
+**Home Page**
+
+![HomePage](https://i.imgur.com/sjX1YiS.png)
+
+**Create Page**
+
+![CreatePage](https://i.imgur.com/3yzjfxJ.png)
+
+**View Games Page**
+
+![ViewPageID](https://i.imgur.com/5m0Zcic.png)
+
+![ViewPage](https://i.imgur.com/0eCsHhN.png)
+
+![ViewPage2](https://i.imgur.com/8H34vuF.png)
+
+**Create Game Record**
+
+![GamesRecord](https://i.imgur.com/q6OlBUp.png)
+
 ## Evaluation 
 
 ### Ideas for Potential Improvements
