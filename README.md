@@ -194,8 +194,6 @@ Mikito Leong
 
 ### Acknowledgements
 
-Oliver Nichols
-
-Ryan Wright
-
-Victoria Sacre
+- Oliver Nichols
+- Ryan Wright
+- Victoria Sacre
