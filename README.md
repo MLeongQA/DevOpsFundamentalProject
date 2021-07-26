@@ -124,30 +124,39 @@ The above diagram shows my continuous integration pipeline to promote rapid deve
 
 **Jenkins Build Script**
 
-I have broken the build script down into four stages:
+I have broken the build script down into three stages:
 
 1. Installation of relevant modules for the virtual environment.
 
 ```
+#!/bin/sh
+sudo apt-get install python3 python3-pip python3-venv chromium-browser -y wget unzip -y
 
+version=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$(chromium-browser --version | grep -oP 'Chromium \K\d+'))
+wget https://chromedriver.storage.googleapis.com/${version}/chromedriver_linux64.zip
+sudo unzip chromedriver_linux64.zip -d /usr/bin
+rm chromedriver_linux64.zip
 ```
 
 2. Setting up the virtual environment with python-venv.
 
 ```
-
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
 ```
 
 3. Initiating the unit and integration tests.
 
 ```
-
+python3 -m pytest --cov=application --cov-report term-missing --disable-warnings
 ```
 
-4. Running the flask-app on the VM.
-
-```
-
-```
 
 ## Development
+
+### Unit Testing
+
+### Integration Testing
+
+### Front-end Development
