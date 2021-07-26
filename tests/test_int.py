@@ -33,18 +33,21 @@ class TestBase(LiveServerTestCase):
         db.session.add(DotaGame(user_id=1, hero_name="Testheroname", game_duration=30, win_loss = "win"))
         db.session.commit()
 
-        self.driver.get(f'http://localhost:{self.TEST_PORT}')
+        self.driver.get(f'http://localhost:{self.TEST_PORT}/home')
 
     def tearDown(self):
         self.driver.quit()
         db.drop_all()
 
     def test_server_status(self):
-        response = urlopen(f"http://localhost:{self.TEST_PORT}")
+        response = urlopen(f"http://localhost:{self.TEST_PORT}/home")
         self.assertEqual(response.code, 200)
 
 
 class TestLinks(TestBase):
+    def test_home(self):
+        self.assertIn(url_for("home"), self.driver.current_url)
+
     def test_create_profile_link(self):
         self.driver.find_element_by_xpath('/html/body/a[1]').click()
         self.assertIn(url_for("create"), self.driver.current_url)
@@ -69,6 +72,16 @@ class TestLinks(TestBase):
         self.driver.find_element_by_xpath('/html/body/div[2]/a[3]').click()
         self.driver.find_element_by_xpath('/html/body/div[2]/a[1]').click()
         self.assertIn(url_for("updategame", game_id = 1), self.driver.current_url)
+
+class TestRead(TestBase):
+    def test_read(self):
+        elements = self.driver.find_element_by_xpath('/html/body/div[2]')
+        assert "Testname" in elements.text
+
+    def test_read_games(self):
+        self.driver.find_element_by_xpath('/html/body/div[2]/a[3]').click()
+        elements = self.driver.find_element_by_xpath('/html/body/div[2]')
+        assert "Testheroname" in elements.text
 
 class TestCreateProfile(TestBase):
     def test_create_profile(self):
