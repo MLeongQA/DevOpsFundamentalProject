@@ -116,6 +116,10 @@ The current structure is one to many relatioship between "User Profile" and "Gam
 
 If I have sufficient time in the project, then I will implement further features on to the ER chart, and possibly another table.
 
+### Analysis of Testing
+
+I've decided to use a series of Unit tests and integration tests for my application. Trello was used to keep track of functionality that required unit/integration tests, to ensure that I reached 100% coverage for my application. More information on each specific testing can be found below.
+
 ### CI Pipeline
 
 ![CI Pipeline Diagram](https://i.imgur.com/kUqBXb6.png)
@@ -157,6 +161,39 @@ python3 -m pytest --cov=application --cov-report term-missing --disable-warnings
 
 ### Unit Testing
 
+Unit Testing was used to test the back-end of my application, to ensure routes were working + data was being manipulated correctly. Each functionality of my app was divided into seperate classes and functions, and assertions were used to ensure that the correct response was produced for each action. Tests are automatically run after every git push using Jenkins webhooks and a coverage report is produced using JaCoCo, which is set up to fail the build, if the coverage degrades more than a specified threshold.
+
+![Coverage](https://i.imgur.com/DT1LrkO.png)
+
+Unit tests and integration tests can be run manually by using the three steps in the Jenkins build script highlighted above. 
+
+![Coverage2](https://i.imgur.com/wxpbymr.png)
+
 ### Integration Testing
 
+Integration testing was used to test the front-end of my application, to ensure that the forms were correctly interacting with each other. Selenium was used to simulate a user on my application, and test each functionality of the site by interacting with forms, links and buttons.
+
+![Coverage2](https://i.imgur.com/wxpbymr.png)
+
+Any failures in the integration testing would be highlighted on the coverage report. 
+
 ### Front-end Development
+
+## Evaluation 
+
+### Ideas for Potential Improvements
+
+- Implement a third heroes database that can be related to games.
+- Implement a many to many relationship between players and games instead of a one to many.
+- Implement a auto increment feature for mmr.
+- Implement filters to allow for broader searches for player profiles/games.
+
+### Authors/Contributors
+
+Mikito Leong
+
+### Acknowledgements
+
+Oliver Nichols
+Ryan Wright
+Victoria Sacre
