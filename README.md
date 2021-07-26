@@ -3,22 +3,22 @@
 ## Contents
 
 - [Introduction](#Introduction)
-  - Objective
-  - My Proposition
-- Architecture
-  - Risk Assessment
-  - Project Tracking
-  - ER Diagram
-  - CI Pipeline
-  - Analysis of Testing
-- Development
-  - Unit Testing
-  - Integration Testing
-  - Front-end Development
-- Evaluation
-  - Points of Improvement
-  - Authors
-  - Acknowledgements
+  - [Objective](#Objective)
+  - [My Proposition](#My Proposition)
+- [Architecture](#Architecture)
+  - [Risk Assessment](#Risk Assessment)
+  - [Project Tracking](#Project Tracking)
+  - [ER Diagram](#ER Diagram)
+  - [CI Pipeline](#CI Pipeline)
+  - [Analysis of Testing](#Analysis of Testing)
+- [Development](#Development)
+  - [Unit Testing](#Unit Testing)
+  - [Integration Testing](#Integration Testing)
+  - [Front-end Development](#Front-end Development)
+- [Evaluation](#Evaluation)
+  - [Points of Improvement](#Points of Improvement)
+  - [Authors](#Authors)
+  - [Acknowledgements](#Acknowledgements)
 
 ## Introduction
 
