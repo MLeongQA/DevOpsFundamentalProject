@@ -2,6 +2,24 @@
 
 ## Contents
 
+- Introduction
+  - Objective
+  - My Proposition
+- Architecture
+  - Risk Assessment
+  - Project Tracking
+  - ER Diagram
+  - CI Pipeline
+  - Analysis of Testing
+- Development
+  - Unit Testing
+  - Integration Testing
+  - Front-end Development
+- Evaluation
+  - Points of Improvement
+  - Authors
+  - Acknowledgements
+
 ## Introduction
 
 ### Objective
